@@ -1,25 +1,35 @@
 import Navbar from "@/components/Navbar";
+import Promocion from "@/components/Promocion";
+
+const eventos = [
+    "Postres para el Día",
+    "Cumpleaños",
+    "Bodas",
+    "Eventos grandes",
+];
 
 export default function MenuCompleto() {
     return (
         <section className="relative">
             <div className="fixed top-0 left-0 z-40 w-screen">
+                <Promocion />
                 <Navbar />
             </div>
             <div className="bg-gradient-to-r from-teal-300 from-10%  w-full h-screen flex justify-center items-center flex-col gap-8">
                 <div className="bg-teal-200 rounded-md shadow-lg mt-10">
-                    <h1 className="text-teal-500 font-medium px-24 py-16 text-3xl shadow-inner">
-                        Conoce Nuestra Amplia Variedad en..<br></br>
-                        Postres para el Día,<br></br>
-                        Postres para Eventos,<br></br>
-                        Pasteles para Cumpleaños,<br></br>
-                        Pasteles para Bodas,<br></br>
+                    <div className="text-gray-500 font-medium px-24 py-16 text-3xl shadow-inner">
+                        <h1>Variedad para todos tus eventos</h1>
+                        {eventos.map((evento)=> (
+                            <li key></li>
+                        ))}
                         Tartas,<br></br>
                         Galletas,<br></br>
                         Gelatinas,<br></br>
-                        y más..<br></br>
-
-                    </h1>
+                        Eventos grandes,<br></br>
+                        <small className="text-sm">
+                            y más.. <br></br>
+                        </small>
+                    </div>
                 </div>
                 <div className="w-10 h-10 text-teal-500 hover:cursor-pointer animate-bounce hover:animate-none hover:text-gray-400">
                     <svg
@@ -37,9 +47,7 @@ export default function MenuCompleto() {
                     </svg>
                 </div>
             </div>
-            <div className="h-screen">
-                
-            </div>
+            <div className="h-screen"></div>
         </section>
     );
 }

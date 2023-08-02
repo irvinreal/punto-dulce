@@ -1,11 +1,15 @@
-import Header from '../components/Header'
-import About from '../components/About'
+import Footer from "@/components/Footer";
+import Header from "../components/header/Header";
+import PresentacionHeader from "../components/presentacionHeader/PresentacionHeader";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between">
+        <main className=" relative flex min-h-screen flex-col items-center justify-between">
+                <Navbar />
             <Header />
-            <About />
+            <PresentacionHeader />
+            <Footer />
         </main>
     );
 }
