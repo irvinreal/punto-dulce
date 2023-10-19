@@ -1,37 +1,35 @@
-import Link from "next/link";
-import Logo from "@/components/Logo";
+'use client'
 
-const postres = [
-    "Pies",
-    "Tartas",
-    "Pasteles",
-    "Galletas",
-    "Budines",
-    "Pan Salado",
-    "Pedidos personalizados",
-];
+import { useState } from 'react'
+import LogoNavbar from './LogoNavbar'
+import NavLinks from './NavLinks'
+import ContactLinks from './ContactLinks'
+import CloseBtnMobile from './CloseBtn-mobile'
 
-const Header = () => {
-    return (
-        <header className="bg-[url('../../public/assets/imgs/bg-reposteria.jpg')] w-screen h-90vh bg-no-repeat bg-cover relative">
-            <div className="h-full bg-gradient-to-t from-white from-5% ">
-                <div className="flex justify-center items-center h-full">
-                    <div className="md:h-max md:p-0 w-max md:max-w-5xl mt-72 md:mt-20">
-                        <div className="text-white text-2xl md:text-7xl italic font-extrabold w-full h-full ">
-                            {postres.map((postre) => (
-                                <h5
-                                    key={postre}
-                                    className="px-3 inline-flex md:w-auto bg-black bg-opacity-20 m-2 rounded-md border-double border-4 border-white"
-                                >
-                                    {postre}
-                                </h5>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    );
-};
+function Header () {
+  const [open, setOpen] = useState(false)
 
-export default Header;
+  const handleBtnMenu = () => {
+    setOpen(!open)
+  }
+  return (
+    <header className='fixed top-0 left-0 right-0 bottom-0 z-40 w-full'>
+      <div className='relative group/navbar transition-transform duration-1000 ease-in-out w-full z-50 h-16 bg-white flex justify-evenly'>
+        <LogoNavbar open={open} />
+        <div
+          className={
+            open
+              ? 'w-screen h-90vh absolute top-0 left-0 bg-white lg:flex lg:flex-row flex-col items-end justify-between flex-grow pe-5'
+              : 'hidden lg:flex lg:flex-grow'
+          }
+        >
+          <NavLinks handleBtnMenu={handleBtnMenu} open={open} />
+          <ContactLinks open={open} />
+        </div>
+        <CloseBtnMobile handleBtnMenu={handleBtnMenu} open={open} />
+      </div>
+    </header>
+  )
+}
+
+export default Header

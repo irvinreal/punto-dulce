@@ -3,7 +3,7 @@ import Link from "next/link";
 import puntoDulceLogo from "../../public/assets/imgs/punto-dulce.svg";
 const Footer = () => {
     return (
-        <footer className="bg-white h-80 flex justify-between items-center w-screen px-16 text-xs">
+        <footer className="bg-white h-80 flex justify-between items-center w-full px-16 text-xs">
             <div className="w-2/5 h-2/3  flex flex-col justify-start">
                 <div className="flex flex-col md:flex-row justify-start w-full text-gray-500">
                     <Image
@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="w-2/5 h-2/3 bg-teal-300 bg-opacity-30 flex items-center justify-center">
-                para el dueño..
+                
             </div>
         </footer>
     );
