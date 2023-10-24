@@ -10,8 +10,8 @@ const postres = [
 
 const MainHeader = () => {
   return (
-    <main className="bg-[url('../../public/assets/imgs/bg-reposteria.jpg')] w-full h-90vh bg-no-repeat bg-cover relative">
-      <div className='h-full bg-gradient-to-t from-white from-5% '>
+    <main className="bg-[url('../../public/assets/imgs/bg-reposteria.jpg')] w-full h-full bg-no-repeat bg-cover relative">
+      <div className='h-full bg-gradient-to-t from-white from-5%'>
         <div className='flex justify-center items-center h-full'>
           <div className='md:h-max md:p-0 w-max md:max-w-5xl mt-72 md:mt-20'>
             <div className='text-white text-2xl md:text-7xl italic font-extrabold w-full h-full '>

@@ -27,7 +27,7 @@ const NAV_LINKS = [
   }
 ]
 
-function NavLinks({ open }) {
+function NavLinks ({ open }) {
   const pathname = usePathname()
 
   return (
@@ -35,8 +35,8 @@ function NavLinks({ open }) {
       <ul
         className={
           open
-            ? 'h-full flex flex-col justify-start items-end pt-10 pe-7 md:flex-row md:justify-center md:items-center gap-3 md:gap-8 md:mx-8'
-            : 'hidden md:flex h-full justify-center items-end pb-1 gap-10'
+            ? 'h-full flex flex-col justify-start items-end pt-10 pe-7 md:flex-row md:justify-center md:items-center gap-7 md:gap-8 md:mx-8'
+            : 'hidden md:flex md:flex-row h-full justify-center items-end pb-1 gap-10'
         }
       >
         {NAV_LINKS.map(({ linkName, href, img }) => (
@@ -52,11 +52,11 @@ function NavLinks({ open }) {
                   : 'text-gray-500 transition ease-in duration-300 group-hover:text-teal-500 text-center relative w-full h-full'
               }
             >
-              {img ? (
+              {img && (
                 <div
                   className={
                     pathname.endsWith(`${href}`)
-                      ? 'w-full absolute bottom-0 left-0 -z-10 flex justify-center -translate-y-6 opacity-100'
+                      ? 'w-full absolute bottom-0 left-0 -z-10 transition-all duration-300 ease-in-out flex justify-center -translate-x-16 -translate-y-1 md:-translate-y-6 opacity-100'
                       : 'w-full absolute bottom-0 left-0 -z-10 flex justify-center transition-all duration-300 ease-in-out -translate-y-4 opacity-0 group-hover:-translate-y-6 group-hover:opacity-100'
                   }
                 >
@@ -68,7 +68,7 @@ function NavLinks({ open }) {
                     />
                   </div>
                 </div>
-              ) : null}
+              )}
 
               <span className='absolute bottom-0 left-0 w-full transition-transform ease-out group-hover:animate-[movingword_.3s_ease-out]'>
                 {linkName}

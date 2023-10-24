@@ -37,7 +37,7 @@ function ContactLinks ({ open }) {
   const pathname = usePathname()
 
   return (
-    <nav className='flex justify-center w-72'>
+    <nav className='flex justify-center md:w-72'>
       <ul
         className={
           open

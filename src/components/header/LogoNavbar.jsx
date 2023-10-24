@@ -2,9 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../../../public/assets/imgs/punto-dulce-green.svg'
 
-function LogoNavbar() {
+function LogoNavbar () {
   return (
-    <div className='flex justify-center w-72 animate-[wiggle_4s_ease-in-out_infinite]'>
+    <div className='flex justify-center w-72 animate-[wiggle_4s_ease-in-out_infinite] z-40'>
       <Link href={'/crear-pedido'}>
         <div className='relative flex items-center justify-center group h-24 w-32'>
           <div className='absolute w-24 h-24 bg-white rounded-full z-30'>
@@ -12,6 +12,7 @@ function LogoNavbar() {
               src={Logo}
               alt='Logotipo'
               fill
+              priority
               style={{ objectFit: 'cover', padding: 10 }}
             />
           </div>
