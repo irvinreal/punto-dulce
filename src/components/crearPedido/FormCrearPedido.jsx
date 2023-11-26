@@ -1,8 +1,7 @@
-"use client";
-import { useState } from "react";
+'use client'
 
 const FormCrearPedido = () => {
-    return (
+  return (
         <div className="w-full min-h-max flex justify-center items-center flex-col relative me-10">
             <div className="w-full h-10 absolute top-4">
                 <div className="bg-gray-500 z-10 w-full rounded flex items-start">
@@ -15,7 +14,7 @@ const FormCrearPedido = () => {
                 <form>
                     <div className="p-2">
                         <label className="text-white" htmlFor="">
-                            Escoge tu pedido{" "}
+                            Escoge tu pedido{' '}
                         </label>
                         <select className="outline-none">
                             <option value="">-- Seleccione --</option>
@@ -36,7 +35,7 @@ const FormCrearPedido = () => {
                 </form>
             </div>
         </div>
-    );
-};
+  )
+}
 
-export default FormCrearPedido;
+export default FormCrearPedido

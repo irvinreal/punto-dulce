@@ -1,55 +1,53 @@
-"use client";
-import { Formik, Form } from "formik";
-import InputText from "./InputText";
-
-import { useState } from "react";
+'use client'
+import { Form, Formik } from 'formik'
+import InputText from './InputText'
 
 const validate = (values) => {
-    const errors = {};
-    console.log(parseInt(values.cel));
+  const errors = {}
+  console.log(parseInt(values.cel))
 
-    if (!values.name) {
-        errors.name = "*Obligatorio";
-    }
+  if (!values.name) {
+    errors.name = '*Obligatorio'
+  }
 
-    if (!values.lastname) {
-        errors.lastname = "*Obligatorio";
-    }
+  if (!values.lastname) {
+    errors.lastname = '*Obligatorio'
+  }
 
-    if (!values.cel) {
-        errors.cel = "*Obligatorio";
-    } else if (
-        parseInt(values.cel) !== "Nan" ||
+  if (!values.cel) {
+    errors.cel = '*Obligatorio'
+  } else if (
+    parseInt(values.cel) !== 'Nan' ||
         parseInt(values.cel).length < 10
-    ) {
-        errors.cel = "*Ingrese un número correcto";
-    }
-    if (!values.email) {
-        errors.email = "*Obligatorio";
-    }
+  ) {
+    errors.cel = '*Ingrese un número correcto'
+  }
+  if (!values.email) {
+    errors.email = '*Obligatorio'
+  }
 
-    if (!values.deliveryDay) {
-        errors.deliveryDay = "*Obligatorio";
-    }
+  if (!values.deliveryDay) {
+    errors.deliveryDay = '*Obligatorio'
+  }
 
-    if (!values.deliveryHour) {
-        errors.deliveryHour = "*Obligatorio";
-    }
+  if (!values.deliveryHour) {
+    errors.deliveryHour = '*Obligatorio'
+  }
 
-    return errors;
-};
+  return errors
+}
 
 const DatosDeFacturacion = () => {
-    return (
+  return (
         <Formik
             initialValues={{
-                name: "",
-                lastname: "",
-                cel: "",
-                email: "",
-                deliveryDay: "",
-                deliveryHour: "",
-                rfc: "",
+              name: '',
+              lastname: '',
+              cel: '',
+              email: '',
+              deliveryDay: '',
+              deliveryHour: '',
+              rfc: ''
             }}
             validate={validate}
             onSubmit={(values) => console.log(values)}
@@ -57,7 +55,7 @@ const DatosDeFacturacion = () => {
             <section className="relative min-h-screen flex justify-center items-center">
                 <div className="w-3/6">
                     <h1 className="text-3xl ms-8 text-gray-700 border-b-2 border-dotted border-gray-200 font-normal tracking-widest">
-                        Datos de Facturación..{" "}
+                        Datos de Facturación..{' '}
                     </h1>
                 </div>
                 <div className="border-2 border-gray-300 bg-opacity-80 shadow-md shadow-gray-300 w-5/6 h-6/6 rounded-lg me-10">
@@ -101,7 +99,7 @@ const DatosDeFacturacion = () => {
                         <div className="flex mx-5 gap-5">
                             <div className="p-2 flex flex-col w-full">
                                 <label className="text-gray-600" htmlFor="rfc">
-                                    RFC{" "}
+                                    RFC{' '}
                                     <span className="text-sm text-gray-500 ps-1"></span>
                                 </label>
                                 <input
@@ -126,7 +124,7 @@ const DatosDeFacturacion = () => {
                 </div>
             </section>
         </Formik>
-    );
-};
+  )
+}
 
-export default DatosDeFacturacion;
+export default DatosDeFacturacion

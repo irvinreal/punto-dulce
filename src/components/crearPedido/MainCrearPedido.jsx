@@ -1,9 +1,8 @@
-import MosaicoCrearPedido from "./MosaicoCrearPedido";
-import FormCrearPedido from "@/components/crearPedido/FormCrearPedido";
-
+import FormCrearPedido from '@/components/crearPedido/FormCrearPedido'
+import MosaicoCrearPedido from './MosaicoCrearPedido'
 
 const MainCreaPedido = () => {
-    return (
+  return (
             <div className="relative h-screen">
                 <div className="absolute top-0 left-0 z-40 w-screen h-full pt-20">
                     <div className="flex flex-col md:flex-row">
@@ -22,7 +21,7 @@ const MainCreaPedido = () => {
                 <div className="absolute z-20 bg-gradient-to-r from-black opacity-80 from-10%  w-full h-full"></div>
                 <div className="absolute z-10 bg-[url('../../public/assets/imgs/bg-hacer-pedido.jpg')] w-full h-full bg-no-repeat bg-cover "></div>
             </div>
-    );
-};
+  )
+}
 
-export default MainCreaPedido;
+export default MainCreaPedido

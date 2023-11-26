@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
 const MainForScroll = ({ children }) => {
-    const handleScroll = () => {
-        console.log("scroll");
-    };
-    <div onScroll={handleScroll}>{children}</div>;
-};
+  const handleScroll = () => {
+    console.log('scroll')
+  }
+    <div onScroll={handleScroll}>{children}</div>
+}
 
-export default MainForScroll;
+export default MainForScroll

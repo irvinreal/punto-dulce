@@ -5,7 +5,7 @@ const MenuCumpleaños = () => {
         <span className="text-8xl opacity-10 font-extrabold">CUMPLEAÑOS</span>
       </div>
       <header>
-        
+
       </header>
     </section>
   )

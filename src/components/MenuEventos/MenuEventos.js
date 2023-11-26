@@ -9,4 +9,3 @@ const MenuEventos = () => {
 }
 
 export default MenuEventos
-

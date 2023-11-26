@@ -1,10 +1,11 @@
-import { useField } from "formik";
+import { useField } from 'formik'
 
-const InputText = ({ error, label, ...props }) => {
-    const [field, meta] = useField(props);
-    return (
+const InputText = ({ erro, label, ...props }) => {
+  const [field, meta] = useField(props)
+  return (
         <div className="p-2 flex flex-col w-full">
-            {meta.touched && meta.error ? (
+            {meta.touched && meta.error
+              ? (
                 <div>
                     <div className="ms-3 text-red-800">
                         <label>{label}</label>
@@ -15,7 +16,8 @@ const InputText = ({ error, label, ...props }) => {
                         className="outline-none rounded border border-red-800 bg-red-100 w-full px-4 placeholder:text-red-400 placeholder:text-xs"
                     />
                 </div>
-            ) : (
+                )
+              : (
                 <div>
                     <div className="ms-3">
                         <label>{label}</label>
@@ -26,9 +28,9 @@ const InputText = ({ error, label, ...props }) => {
                         placeholder={label}
                     />
                 </div>
-            )}
+                )}
         </div>
-    );
-};
+  )
+}
 
-export default InputText;
+export default InputText

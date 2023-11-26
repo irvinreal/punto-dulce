@@ -1,7 +1,7 @@
-import "../../../public/assets/imgs/mosaico-crear-pedido/Rectangle-1.jpg";
+import '../../../public/assets/imgs/mosaico-crear-pedido/Rectangle-1.jpg'
 
 const MosaicoCrearPedido = () => {
-    return (
+  return (
         <div className="h-5/6 relative bottom-10">
             <div className="bg-gradient-to-b from-black from-0% absolute z-50 w-full h-52"></div>
             <div>
@@ -81,7 +81,7 @@ const MosaicoCrearPedido = () => {
                 </div>
             </div>
         </div>
-    );
-};
+  )
+}
 
-export default MosaicoCrearPedido;
+export default MosaicoCrearPedido
