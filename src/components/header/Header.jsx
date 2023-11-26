@@ -12,7 +12,6 @@ function Header () {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    console.log(pathname)
     setOpen(false)
   }, [pathname])
 

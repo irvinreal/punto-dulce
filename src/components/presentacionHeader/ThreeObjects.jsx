@@ -1,7 +1,7 @@
-import ObjectThree from './ObjectThree'
-import pastellight from '../../../public/assets/imgs/presentacionheader/pastel-light.jpg'
-import pasteldemoras from '../../../public/assets/imgs/presentacionheader/pastel-de-moras.jpg'
 import panecitosdeldia from '../../../public/assets/imgs/presentacionheader/panecitos-del-dia.jpg'
+import pasteldemoras from '../../../public/assets/imgs/presentacionheader/pastel-de-moras.jpg'
+import pastellight from '../../../public/assets/imgs/presentacionheader/pastel-light.jpg'
+import ObjectThree from './ObjectThree'
 
 const ThreeObjects = () => {
   return (

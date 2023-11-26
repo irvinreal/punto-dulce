@@ -56,8 +56,8 @@ function NavLinks ({ open }) {
                 <div
                   className={
                     pathname.endsWith(`${href}`)
-                      ? 'w-full absolute bottom-0 left-0 -z-10 transition-all duration-300 ease-in-out flex justify-center -translate-x-16 -translate-y-1 md:-translate-y-6 opacity-100'
-                      : 'w-full absolute bottom-0 left-0 -z-10 flex justify-center transition-all duration-300 ease-in-out -translate-y-4 opacity-0 group-hover:-translate-y-6 group-hover:opacity-100'
+                      ? 'w-full absolute bottom-0 left-0 -z-10 transition-all duration-300 ease-in-out flex justify-center -translate-x-16 md:translate-x-0 -translate-y-1 md:-translate-y-6 opacity-100'
+                      : 'w-full absolute bottom-0 left-0 -z-10 flex justify-center md:transition-all md:duration-300 ease-in-out -translate-y-4 opacity-0 md:group-hover:-translate-y-6 md:group-hover:opacity-100'
                   }
                 >
                   <div className='w-6 h-6 flex justify-center items-center'>

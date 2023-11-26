@@ -16,11 +16,11 @@ function LogoNavbar () {
               style={{ objectFit: 'cover', padding: 10 }}
             />
           </div>
-          <div className='absolute z-50 text-gray-500 h-full flex items-center justify-center transition-colors duration-300 animate-[beatcolor_4s_ease-in-out_infinite]'>
+          <div className='absolute z-50 text-gray-500 h-full flex items-center justify-center '>
             <span className='text-md tracking-widest'>Punto Dulce</span>
           </div>
           <div className='absolute z-10 text-gray-500 h-full w-40 flex items-center justify-center'>
-            <span className='invisible bg-white w-full py-2 text-center rounded-md shadow-inner text-[1px] sm:text[4px] tracking-normal transition-all ease-out duration-1000 sm:group-hover:translate-y-20 sm:group-hover:text-xs sm:translate-x-0 group-hover:translate-x-0 group-hover:visible group-hover:shadow-inner'>
+            <span className='invisible bg-white w-full py-2 text-center rounded-md shadow-inner text-[1px] sm:text[4px] tracking-normal transition-all ease-out duration-1000 sm:group-hover:translate-y-20 sm:group-hover:text-xs sm:translate-x-0 group-hover:translate-x-0 md:group-hover:visible group-hover:shadow-inner'>
               el punto ..es probarlo
             </span>
           </div>

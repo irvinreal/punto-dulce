@@ -7,8 +7,8 @@ import PresentacionHeader from '../components/presentacionHeader/PresentacionHea
 
 export default function Home () {
   return (
-    <div className='relative w-full h-[100dvh]'>
-        <MainHeader />
+    <div className='relative w-full h-screen'>
+      <MainHeader />
       <PresentacionHeader />
       <SectionLinkToMenu />
       <Footer />

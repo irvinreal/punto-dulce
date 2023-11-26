@@ -1,14 +1,14 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import ThreeObjects from './ThreeObjects'
-import cotizar from '../../../public/assets/imgs/bienvenida/ticket.svg'
+import Link from 'next/link'
 import personalizar1 from '../../../public/assets/imgs/bienvenida/personalizar1.png'
 import personalizar2 from '../../../public/assets/imgs/bienvenida/personalizar2.png'
 import personalizar3 from '../../../public/assets/imgs/bienvenida/personalizar3.png'
+import cotizar from '../../../public/assets/imgs/bienvenida/ticket.svg'
+import ThreeObjects from './ThreeObjects'
 
 const PresentacionHeader = () => {
   return (
-    <div className='h-full md:h-screen flex flex-col w-full'>
+    <section className='min-h-full md:h-screen flex flex-col w-full'>
       <ThreeObjects />
       <div className='h-full flex flex-col md:flex-row justify-center items-center gap-14 md:gap-20 my-20 md:mt-28'>
         <Link
@@ -98,7 +98,7 @@ const PresentacionHeader = () => {
           </p>
         </Link>
       </div>
-    </div>
+    </section>
   )
 }
 
