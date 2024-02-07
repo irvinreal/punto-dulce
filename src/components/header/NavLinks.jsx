@@ -2,13 +2,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import imgMangaPastelera from '../../assets/imgs/manga-pastelera.png'
-import imgPan from '../../assets/imgs/pan.png'
 import imgPastel from '../../assets/imgs/pastel.png'
 
 const NAV_LINKS = [
   {
     linkName: 'Inicio',
     href: '/'
+  },
+  {
+    linkName: 'menu',
+    href: '/menu'
   },
   {
     linkName: 'Pastelería',
@@ -19,12 +22,12 @@ const NAV_LINKS = [
     linkName: 'Repostería',
     href: '/reposteria',
     img: imgMangaPastelera
-  },
-  {
-    linkName: 'Panadería',
-    href: '/panaderia',
-    img: imgPan
   }
+  // {
+  //   linkName: 'Panadería',
+  //   href: '/panaderia',
+  //   img: imgPan
+  // }
 ]
 
 function NavLinks ({ open }) {
@@ -41,15 +44,15 @@ function NavLinks ({ open }) {
       >
         {NAV_LINKS.map(({ linkName, href, img }) => (
           <li
-            className='relative flex justify-center items-center group group-hover:text-teal-500 cursor-pointer w-24 h-full border-b-2 border-transparent'
+            className='relative flex justify-center items-end group group-hover:text-teal-500 cursor-pointer p-2 h-full border-b-2 border-transparent'
             key={linkName}
           >
             <Link
               href={href}
               className={
                 pathname.endsWith(`${href}`)
-                  ? 'text-teal-500 text-center relative transition ease-in duration-300 group-hover:text-teal-500 w-full h-full'
-                  : 'text-gray-500 transition ease-in duration-300 group-hover:text-teal-500 text-center relative w-full h-full'
+                  ? 'text-teal-500 text-center relative transition ease-in duration-300 group-hover:text-teal-500 w-full h-full flex items-end'
+                  : 'text-gray-500 transition ease-in duration-300 group-hover:text-teal-500 text-center relative w-full h-full flex items-end'
               }
             >
               {img && (
@@ -70,7 +73,7 @@ function NavLinks ({ open }) {
                 </div>
               )}
 
-              <span className='absolute bottom-0 left-0 w-full transition-transform ease-out group-hover:animate-[movingword_.3s_ease-out]'>
+              <span className='w-full transition-transform ease-out group-hover:animate-[movingword_.3s_ease-out]'>
                 {linkName}
               </span>
             </Link>

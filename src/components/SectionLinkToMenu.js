@@ -4,7 +4,7 @@ const SectionLinkToMenu = () => {
   return (
     <div className='w-full relative h-90vh flex flex-col justify-center items-center bg-teal-400'>
       <div>
-        <p className='relative bottom-20 text-5xl md:text-7xl font-bold text-white mb-10 animate-bounce text-center'>
+        <p className='relative bottom-20 text-5xl md:text-7xl font-bold text-white mb-10  text-center'>
           CONOCE NUESTRO
         </p>
       </div>

@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import CloseBtnMobile from './CloseBtn-mobile'
 import ContactLinks from './ContactLinks'
-import LogoNavbar from './LogoNavbar'
+import LogoNavbar from './NavLogo'
 import NavLinks from './NavLinks'
 
 function Header () {
@@ -20,7 +20,7 @@ function Header () {
   }
   return (
     <header className='fixed top-0 left-0 right-0 z-40 w-full'>
-      <div className='relative group/navbar transition-transform duration-1000 ease-in-out w-full z-50 h-16 bg-white flex justify-evenly'>
+      <div className='relative group/navbar transition-transform duration-1000 ease-in-out w-full z-50 h-20 bg-white flex justify-evenly'>
         <LogoNavbar open={open} />
         <div
           className={

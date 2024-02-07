@@ -1,32 +1,16 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-const iconPedir = (
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width='16'
-    height='16'
-    fillRule='currentColor'
-    className='bi bi-arrow-right'
-    viewBox='0 0 16 16'
-  >
-    <path
-      fillRule='evenodd'
-      d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'
-    />
-  </svg>
-)
-
 const CONTACT_LINKS = [
-  {
-    linkName: 'Pedir',
-    href: '/crear-pedido',
-    icon: iconPedir
-  },
-  {
-    linkName: 'Mis Pedidos',
-    href: '/mis-pedidos'
-  },
+  // {
+  //   linkName: 'Pedir',
+  //   href: '/crear-pedido',
+  //   icon: iconPedir
+  // },
+  // {
+  //   linkName: 'Mis Pedidos',
+  //   href: '/mis-pedidos'
+  // },
   {
     linkName: 'Contacto',
     href: '/contacto'
@@ -48,7 +32,7 @@ function ContactLinks ({ open }) {
         {CONTACT_LINKS.map(({ linkName, href, icon }) => (
           <li
             key={linkName}
-            className='group relative flex justify-center items-center group-hover:text-teal-500 cursor-pointer'
+            className='group relative flex justify-center items-center group-hover:text-teal-500 cursor-pointer md:pb-2'
           >
             <Link
               href={href}

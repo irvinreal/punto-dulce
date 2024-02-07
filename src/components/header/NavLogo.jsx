@@ -4,7 +4,7 @@ import Logo from '../../../public/assets/imgs/punto-dulce-green.svg'
 
 function LogoNavbar () {
   return (
-    <div className='flex justify-center w-72 animate-[wiggle_4s_ease-in-out_infinite] z-40'>
+    <div className='flex justify-center w-72 animate-[wiggle_5s_ease-in-out_infinite] z-40'>
       <Link href='/'>
         <div className='relative flex items-center justify-center group h-24 w-32'>
           <div className='absolute w-24 h-24 bg-white rounded-full z-30'>
